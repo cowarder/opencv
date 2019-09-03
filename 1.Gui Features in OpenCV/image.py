@@ -33,6 +33,6 @@ cv2.destroyAllWindows()                             # or cv2.destroyWindow('imag
 # waring: opencv colorful image format is (BGR), if we want to show image with matplotlib
 # we need to transfer it into RGB format
 b, g, r = cv2.split(img)
-img = cv2.merge([r, g, b])
+img = cv2.merge([r, g, b])                          # or we transfer into numpy method: img = img[:, :, (2, 1, 0)]
 plt.imshow(img)
 plt.show()
